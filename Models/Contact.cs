@@ -16,5 +16,8 @@ namespace ContactsHolder.Models{
 
         [Display(Name = "Type")]
         public string type{get;set;}
+
+        [Display(Name="Important")]
+        public string Importance{get;set;}
     }
 }
