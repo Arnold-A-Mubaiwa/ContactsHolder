@@ -165,3 +165,7 @@
 /root/Desktop/C#/ContactsHolder/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /root/Desktop/C#/ContactsHolder/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /root/Desktop/C#/ContactsHolder/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/root/Desktop/C#/ContactsHolder/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Create.cshtml.g.cs
+/root/Desktop/C#/ContactsHolder/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Delete.cshtml.g.cs
+/root/Desktop/C#/ContactsHolder/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Details.cshtml.g.cs
+/root/Desktop/C#/ContactsHolder/obj/Debug/netcoreapp3.1/Razor/Views/Contact/Edit.cshtml.g.cs

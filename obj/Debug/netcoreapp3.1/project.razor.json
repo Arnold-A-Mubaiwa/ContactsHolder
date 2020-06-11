@@ -20541,6 +20541,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Contact/Edit.cshtml",
+      "TargetPath": "Views\\Contact\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Shared/_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
@@ -20551,8 +20556,23 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Contact/Create.cshtml",
+      "TargetPath": "Views\\Contact\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Contact/Delete.cshtml",
+      "TargetPath": "Views\\Contact\\Delete.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/root/Desktop/C#/ContactsHolder/Views/Contact/Details.cshtml",
+      "TargetPath": "Views\\Contact\\Details.cshtml",
       "FileKind": "mvc"
     },
     {
