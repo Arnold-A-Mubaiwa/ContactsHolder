@@ -2,9 +2,13 @@
 
 @{
     ViewData["Title"] = "Index";
+    var AllContacts=0;
+foreach (var i in Model) {
+        AllContacts++;
+        }
+        
 }
-
-<h2>Contacts</h2>
+<h2>Contacts(@AllContacts)</h2>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -34,6 +38,7 @@
         </tr>
     </thead>
     <tbody>
+        
 @foreach (var item in Model) {
         <tr>
             <td>
@@ -59,7 +64,13 @@
                @if(@value.ToString =="Yes"){
 
                } *@
-               @Html.DisplayFor(modelItem => item.Importance)
+               @if((item.Importance)=="Yes"){
+                   <input checked data-size="mini" data-toggle="toggle" type="checkbox">
+               }
+               else{
+                   <input unchecked  data-size="mini" data-toggle="toggle" type="checkbox">
+               }
+               
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
@@ -68,5 +79,6 @@
             </td>
         </tr>
 }
+
     </tbody>
 </table>
