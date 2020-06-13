@@ -11,7 +11,9 @@ foreach (var i in Model) {
     <h1 class="display-4">Welcome</h1>
     <p>Below are your Important contacts</p>
 </div>
-<h3>Important Contacts(@importantContacts)</h3>
+<div class="row">
+    <div class="col">
+      <h3>Important Contacts(@importantContacts)</h3>
 <table class="table">
     <thead>
         <tr>
@@ -35,10 +37,15 @@ foreach (var i in Model) {
         </tr>
     </thead>
     <tbody>
+        @{
+            int userID;
+        }
 @foreach (var item in Model) {
+    userID=@item.id;
         <tr>
-            <td>
+            <td><a asp-action="Index" asp-route-id="@item.id" >
                 @Html.DisplayFor(modelItem => item.Name)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Surname)
@@ -52,8 +59,15 @@ foreach (var i in Model) {
             <td>
                 @Html.DisplayFor(modelItem => item.type)
             </td>
-            
+             
         </tr>
 }
     </tbody>
 </table>
+
+    </div>
+    <div class="col">
+        @* <label asp-for="email" class="control-label">hi</label>
+                <input asp-for="email" class="form-control" /> *@
+    </div>
+  </div>

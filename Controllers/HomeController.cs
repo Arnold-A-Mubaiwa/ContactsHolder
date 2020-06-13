@@ -25,7 +25,7 @@ namespace ContactsHolder.Controllers {
             var contactNo = from m in _context.Contact
             select m;
 
-            if (!String.IsNullOrEmpty (searchString)) {
+            if (!String.IsNullOrEmpty (searchString)) {                
                 contactNo = contactNo.Where (s => s.Importance.Contains (searchString));
             }
 
@@ -43,9 +43,9 @@ namespace ContactsHolder.Controllers {
         public ViewResult AboutUs (ContactsHolder.Models.Mail _objMail) {
             if (ModelState.IsValid) {
                 MailMessage mail = new MailMessage ();
-                mail.To.Add (_objMail.To);
-                mail.From = new MailAddress (_objMail.From);
-                mail.Subject = _objMail.Subject;
+                mail.To.Add ("durnoldsinstitute@gmail.com");
+                mail.From = new MailAddress ("durnoldsinstitute@gmail.com");
+                mail.Subject = "Feedback";
                 string Body = _objMail.Body;
                 mail.Body = Body;
                 mail.IsBodyHtml = true;
@@ -61,6 +61,7 @@ namespace ContactsHolder.Controllers {
                 return View ();
             }
         }
+        
 
         [ResponseCache (Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error () {

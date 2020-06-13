@@ -13,6 +13,16 @@ foreach (var i in Model) {
 <p>
     <a asp-action="Create">Create New</a>
 </p>
+<div  class="text-center">
+    <form asp-controller="Contact" asp-action="Index" method="get">
+        <div class="input-group mb-3">
+  <input type="text" class="form-control" name="searchString" placeholder="Name" aria-describedby="basic-addon2">
+  <div class="input-group-append">
+    <input class="btn btn-outline-secondary" type="submit" value="SEARCH"/>
+  </div>
+</div>
+    </form>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -57,18 +67,11 @@ foreach (var i in Model) {
                 @Html.DisplayFor(modelItem => item.type)
             </td>
             <td>
-               @* @{
-                   Html.Value(modelItem => item.Importance);
-                   var value=Html.DisplayFor(modelItem => item.Importance);
-               }
-               @if(@value.ToString =="Yes"){
-
-               } *@
                @if((item.Importance)=="Yes"){
-                   <input checked data-size="mini" data-toggle="toggle" type="checkbox">
+                   <input disabled checked data-on="Yes" data-off="No" data-size="small" data-toggle="toggle" type="checkbox">
                }
                else{
-                   <input unchecked  data-size="mini" data-toggle="toggle" type="checkbox">
+                   <input disabled unchecked data-off="No" data-on="Yes" data-size="small" data-toggle="toggle" type="checkbox">
                }
                
             </td>

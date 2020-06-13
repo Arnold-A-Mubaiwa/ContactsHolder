@@ -19,9 +19,16 @@ namespace ContactsHolder.Controllers
         }
 
         // GET: Contact
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Contact.ToListAsync());
+       public async Task<IActionResult> Index (string searchString) {
+            var contactNo = from m in _context.Contact
+            select m;
+
+            if (!String.IsNullOrEmpty (searchString)) {                
+                contactNo = contactNo.Where (s => s.Name.Contains (searchString));
+                
+            }
+
+            return View (await contactNo.ToListAsync());
         }
 
         // GET: Contact/Details/5
